@@ -1,0 +1,49 @@
+default_max_transition value
+----------------------------
+The default_max_transition time for this library has been set to coincide with
+the maximum transition time for which the library has been characterized. For
+most designs, the default_max_transition will be too high, so it should be
+adjusted, using the set_max_transition command in Synopsys, to a more
+appropriate value specific to the target design.
+
+Wireload models
+---------------
+The wireload tables included within these timing models are FOR REFERENCE
+ONLY. Wireload models are very subjective to variations due to place & route
+design style, place & route tools, number of metal layers, block size, routing
+density and other design specific parameters. It is strongly recommended that
+users develop their own wireload models for their specific design environment
+for the highest level of accuracy.
+
+Process K-factors
+-----------------
+For each Synopsys library (fast, typical, slow), both the "nom_process"
+variable and the "process" operating condition are set to 1. Because each
+corner library was characterized using the foundry's corresponding process
+models (FF for fast, TT for typical, SS for slow), it is not necessary to
+derate the process condition within Synopsys. When mixing Artisan libraries
+with other vendor libraries, the Artisan process operating condition should be
+set equal to the nom_process value to maintain timing accuracy.
+
+Transition Time Measurements
+----------------------------
+Transition time measurements are made from 30% of VDD to 70% of VDD for rising
+signal transitions. Transition time measurements are made from 70% of VDD to
+30% of VDD for falling signal transitions. Transition times are extrapolated
+to 10% and 90% threshold values in timing models, such as the .lib to remain
+compatible with IP from other vendors.
+
+"dont_use" Properties
+---------------------
+The following cells have the "dont_use" property set by default:
+
+  RF1R1WX1 RF2R1WX1 RFRDX1 RFRDX2 RFRDX4 TIEHI TIELO
+
+The RF* cells are designed for building custom register file instances, which
+cannot by synthesized by DesignCompiler. The RF* cells must be instantiated by
+hand or by hand-crafted script to build custom register file instances.
+
+The TIE* cells have the dont_use property set due to widespread customer
+requests that prefer to tie off signals directly to the VDD and VSS rails. If
+you prefer to tie off pins using the TIEHI/TIELO cells, you should disable the
+"dont_use" properties on TIEHI/TIELO cells in the Synopsys libraries.

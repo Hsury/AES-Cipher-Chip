@@ -1,0 +1,970 @@
+dc_shell> gui_start
+design_vision> read_file -format verilog {/home/ichip/Desktop/DC_Final/aes.v /home/ichip/Desktop/DC_Final/aes_core.v /home/ichip/Desktop/DC_Final/aes_decipher_block.v /home/ichip/Desktop/DC_Final/aes_encipher_block.v /home/ichip/Desktop/DC_Final/aes_inv_sbox.v /home/ichip/Desktop/DC_Final/aes_key_mem.v /home/ichip/Desktop/DC_Final/aes_sbox.v /home/ichip/Desktop/DC_Final/display.v}
+Loading db file '/home/ichip/project/chip/ref/db/io/SP013W_V1p0_max.db'
+Loading db file '/home/ichip/project/chip/ref/db/sc/slow_1v08c125.db'
+Loading db file '/eda/synopsys/syn_vH-2013.03/libraries/syn/gtech.db'
+Loading db file '/eda/synopsys/syn_vH-2013.03/libraries/syn/standard.sldb'
+  Loading link library 'SP013D3W_V1p4_max'
+  Loading link library 'slow_1v08c125'
+  Loading link library 'gtech'
+Loading verilog files: '/home/ichip/Desktop/DC_Final/aes.v' '/home/ichip/Desktop/DC_Final/aes_core.v' '/home/ichip/Desktop/DC_Final/aes_decipher_block.v' '/home/ichip/Desktop/DC_Final/aes_encipher_block.v' '/home/ichip/Desktop/DC_Final/aes_inv_sbox.v' '/home/ichip/Desktop/DC_Final/aes_key_mem.v' '/home/ichip/Desktop/DC_Final/aes_sbox.v' '/home/ichip/Desktop/DC_Final/display.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/ichip/Desktop/DC_Final/aes.v
+Compiling source file /home/ichip/Desktop/DC_Final/aes_core.v
+Compiling source file /home/ichip/Desktop/DC_Final/aes_decipher_block.v
+Compiling source file /home/ichip/Desktop/DC_Final/aes_encipher_block.v
+Compiling source file /home/ichip/Desktop/DC_Final/aes_inv_sbox.v
+Compiling source file /home/ichip/Desktop/DC_Final/aes_key_mem.v
+Compiling source file /home/ichip/Desktop/DC_Final/aes_sbox.v
+Compiling source file /home/ichip/Desktop/DC_Final/display.v
+
+Statistics for case statements in always block at line 281 in file
+        '/home/ichip/Desktop/DC_Final/aes.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           296            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine aes line 265 in file
+                '/home/ichip/Desktop/DC_Final/aes.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| current_status_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      init_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      next_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine aes line 281 in file
+                '/home/ichip/Desktop/DC_Final/aes.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   result_reg_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cnt_32_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   next_status_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      drive_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     encdec_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       key_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     keylen_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      block_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 266 in file
+        '/home/ichip/Desktop/DC_Final/aes_core.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           276            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine aes_core line 188 in file
+                '/home/ichip/Desktop/DC_Final/aes_core.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| aes_core_ctrl_reg_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     ready_reg_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| result_valid_reg_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Statistics for case statements in always block at line 303 in file
+        '/home/ichip/Desktop/DC_Final/aes_decipher_block.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           321            |    auto/auto     |
+|           339            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 452 in file
+        '/home/ichip/Desktop/DC_Final/aes_decipher_block.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           464            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine aes_decipher_block line 256 in file
+                '/home/ichip/Desktop/DC_Final/aes_decipher_block.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  dec_ctrl_reg_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  block_w3_reg_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ready_reg_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  round_ctr_reg_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  sword_ctr_reg_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  block_w2_reg_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  block_w1_reg_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  block_w0_reg_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 264 in file
+        '/home/ichip/Desktop/DC_Final/aes_encipher_block.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           283            |    auto/auto     |
+|           297            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 400 in file
+        '/home/ichip/Desktop/DC_Final/aes_encipher_block.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           424            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine aes_encipher_block line 217 in file
+                '/home/ichip/Desktop/DC_Final/aes_encipher_block.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  enc_ctrl_reg_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  block_w3_reg_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ready_reg_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|  round_ctr_reg_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  sword_ctr_reg_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  block_w2_reg_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  block_w1_reg_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  block_w0_reg_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+Warning:  /home/ichip/Desktop/DC_Final/aes_key_mem.v:234: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 189 in file
+        '/home/ichip/Desktop/DC_Final/aes_key_mem.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           234            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 366 in file
+        '/home/ichip/Desktop/DC_Final/aes_key_mem.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           384            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine aes_key_mem line 133 in file
+                '/home/ichip/Desktop/DC_Final/aes_key_mem.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|  prev_key1_reg_reg   | Flip-flop |  29   |  Y  | N  | N  | N  | N  | N  | N  |
+|  prev_key1_reg_reg   | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|  prev_key0_reg_reg   | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+|  round_ctr_reg_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rcon_reg_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     key_mem_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+| key_mem_ctrl_reg_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ready_reg_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+| aes_key_mem/180  |   16   |   128   |      4       | N  |
+===========================================================
+
+Statistics for case statements in always block at line 48 in file
+        '/home/ichip/Desktop/DC_Final/display.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            50            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 100 in file
+        '/home/ichip/Desktop/DC_Final/display.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           101            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine display line 23 in file
+                '/home/ichip/Desktop/DC_Final/display.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clkout_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       cnt_reg       | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine display line 40 in file
+                '/home/ichip/Desktop/DC_Final/display.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    scan_cnt_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/ichip/Desktop/DC_Final/aes.db:aes'
+Loaded 8 designs.
+Current design is 'aes'.
+aes aes_core aes_decipher_block aes_encipher_block aes_inv_sbox aes_key_mem aes_sbox display
+Current design is 'aes'.
+design_vision> link
+  Linking design 'aes'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (8 designs)               /home/ichip/Desktop/DC_Final/aes.db, etc
+  SP013D3W_V1p4_max (library) /home/ichip/project/chip/ref/db/io/SP013W_V1p0_max.db
+  slow_1v08c125 (library)     /home/ichip/project/chip/ref/db/sc/slow_1v08c125.db
+
+1
+design_vision> uniquify
+1
+design_vision> set_dont_use slow_1v08c125/CLK*
+1
+design_vision> set_operating_conditions -library slow_1v08c125 slow_1v08c125
+Using operating conditions 'slow_1v08c125' found in library 'slow_1v08c125'.
+1
+design_vision> set_wire_load_model -name ForQA -library slow_1v08c125
+1
+design_vision> set_load 3.000000 [get_ports "KEY_LEN"]
+1
+design_vision> set_load 3.000000 [get_ports "SEG_0"]
+1
+design_vision> set_load 3.000000 [get_ports "SEG_1"]
+1
+design_vision> set_load 3.000000 [get_ports "SEG_2"]
+1
+design_vision> set_load 3.000000 [get_ports "SEG_3"]
+1
+design_vision> set_load 3.000000 [get_ports "SEG_4"]
+1
+design_vision> set_load 3.000000 [get_ports "SEG_5"]
+1
+design_vision> set_load 3.000000 [get_ports "XOUT"]
+1
+design_vision> set_load 3.000000 [get_ports "SEG_6"]
+1
+design_vision> set_load 3.000000 [get_ports "DATA_0"]
+1
+design_vision> set_load 3.000000 [get_ports "POS_0"]
+1
+design_vision> set_load 3.000000 [get_ports "DATA_1"]
+1
+design_vision> set_load 3.000000 [get_ports "POS_1"]
+1
+design_vision> set_load 3.000000 [get_ports "ENC_DEC"]
+1
+design_vision> set_load 3.000000 [get_ports "DATA_2"]
+1
+design_vision> set_load 3.000000 [get_ports "DATA_3"]
+1
+design_vision> set_load 3.000000 [get_ports "DATA_4"]
+1
+design_vision> set_load 3.000000 [get_ports "PHASE_0"]
+1
+design_vision> set_load 3.000000 [get_ports "DATA_5"]
+1
+design_vision> set_load 3.000000 [get_ports "PHASE_1"]
+1
+design_vision> set_load 3.000000 [get_ports "DATA_6"]
+1
+design_vision> set_load 3.000000 [get_ports "PHASE_2"]
+1
+design_vision> set_load 3.000000 [get_ports "DATA_7"]
+1
+design_vision> set_load 3.000000 [get_ports "FLAG"]
+1
+design_vision> set_input_transition 0.5 [all_inputs]
+1
+design_vision> create_clock -name "XIN" -period 10 -waveform { 0.000 5.000  }  { XIN  }
+1
+design_vision> set_dont_touch_network  [ find clock XIN ]
+1
+design_vision> set_input_delay -clock XIN  -max -rise 2 "DATA_1 DATA_2 DATA_3 DATA_4 DATA_5 DATA_6 DATA_7 XIN RST CLK DATA_0"
+1
+design_vision> set_input_delay -clock XIN -max -fall 2 "DATA_1 DATA_2 DATA_3 DATA_4 DATA_5 DATA_6 DATA_7 XIN RST CLK DATA_0"
+1
+design_vision> set_input_delay -clock XIN -min -rise 0 "DATA_1 DATA_2 DATA_3 DATA_4 DATA_5 DATA_6 DATA_7 XIN RST CLK DATA_0"
+1
+design_vision> set_input_delay -clock XIN  -min -fall 0 "DATA_1 DATA_2 DATA_3 DATA_4 DATA_5 DATA_6 DATA_7 XIN RST CLK DATA_0"
+1
+design_vision> set_output_delay -clock XIN  -max -rise 2 "FLAG KEY_LEN SEG_0 SEG_1 SEG_2 SEG_3 SEG_4 SEG_5 XOUT SEG_6 DATA_0 POS_0 DATA_1 POS_1 ENC_DEC DATA_2 DATA_3 DATA_4 PHASE_0 DATA_5 PHASE_1 DATA_6 PHASE_2 DATA_7"
+1
+design_vision> set_output_delay -clock XIN -max -fall 2 "FLAG KEY_LEN SEG_0 SEG_1 SEG_2 SEG_3 SEG_4 SEG_5 XOUT SEG_6 DATA_0 POS_0 DATA_1 POS_1 ENC_DEC DATA_2 DATA_3 DATA_4 PHASE_0 DATA_5 PHASE_1 DATA_6 PHASE_2 DATA_7"
+1
+design_vision> set_output_delay -clock XIN -min -rise 0 "FLAG KEY_LEN SEG_0 SEG_1 SEG_2 SEG_3 SEG_4 SEG_5 XOUT SEG_6 DATA_0 POS_0 DATA_1 POS_1 ENC_DEC DATA_2 DATA_3 DATA_4 PHASE_0 DATA_5 PHASE_1 DATA_6 PHASE_2 DATA_7"
+1
+design_vision> set_output_delay -clock XIN  -min -fall 0 "FLAG KEY_LEN SEG_0 SEG_1 SEG_2 SEG_3 SEG_4 SEG_5 XOUT SEG_6 DATA_0 POS_0 DATA_1 POS_1 ENC_DEC DATA_2 DATA_3 DATA_4 PHASE_0 DATA_5 PHASE_1 DATA_6 PHASE_2 DATA_7"
+1
+design_vision> set_max_area 0
+1
+design_vision> compile -exact_map
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | H-2013.03-DWBB_201303.1 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 12 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: IO pad 'PVSS3W' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS3CAPW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS3APW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVSS1W' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVPPW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD3CAPW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD3APW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1W' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PVDD1CEW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PANA4APW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PANA3APW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PANA2APW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PANA2AP1W' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PANA1CAPW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PANA1CAP1W' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PANA1APW' is unusable: unknown logic function.  (OPT-1022)
+Warning: IO pad 'PANA1AP1W' is unusable: unknown logic function.  (OPT-1022)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'display'
+Warning: The trip points for the library named slow_1v08c125 differ from those in the library named SP013D3W_V1p4_max. (TIM-164)
+  Processing 'aes_sbox'
+  Processing 'aes_key_mem'
+Information: The register 'key_mem_ctrl_reg_reg[2]' is a constant and will be removed. (OPT-1206)
+  Processing 'aes_inv_sbox'
+  Processing 'aes_decipher_block'
+Information: The register 'dec_ctrl_reg_reg[2]' is a constant and will be removed. (OPT-1206)
+  Processing 'aes_encipher_block'
+Information: The register 'enc_ctrl_reg_reg[2]' is a constant and will be removed. (OPT-1206)
+  Processing 'aes_core'
+  Processing 'aes'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'aes_DW01_inc_0'
+  Processing 'aes_DW01_cmp2_0'
+  Processing 'aes_DW01_cmp2_1'
+  Processing 'display_DW01_inc_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:46  706025.0      0.00      -0.1     448.4                          
+    0:00:46  706025.0      0.00      -0.1     448.4                          
+    0:00:46  706025.0      0.00      -0.1     448.4                          
+    0:00:46  706025.0      0.00      -0.1     448.4                          
+    0:00:47  706025.0      0.00      -0.1     448.4                          
+    0:00:56  473927.6      0.28      12.2     445.4                          
+    0:00:56  473024.6      0.00      -0.1     445.4                          
+    0:00:59  472939.7      0.56      24.8     445.3                          
+    0:00:59  473002.5      0.19       8.3     445.3                          
+    0:00:59  473017.8      0.10       4.4     445.3                          
+    0:01:00  473029.7      0.00      -0.1     445.3                          
+    0:01:00  473029.7      0.00      -0.1     445.3                          
+    0:01:00  473029.7      0.00      -0.1     445.3                          
+    0:01:00  473029.7      0.00      -0.1     445.3                          
+    0:01:00  473029.7      0.00      -0.1     445.3                          
+    0:01:00  472969.4      0.00      -0.1     427.6                          
+    0:01:00  472958.9      0.00      -0.1     423.0                          
+    0:01:01  472876.2      0.00      -0.1     421.8                          
+    0:01:01  472814.2      0.00      -0.1     420.8                          
+    0:01:01  472752.2      0.00      -0.1     419.9                          
+    0:01:01  472731.5      0.00      -0.1     419.6                          
+    0:01:01  472731.5      0.00      -0.1     419.6                          
+    0:01:01  472731.5      0.00      -0.1     419.6                          
+    0:01:01  472731.5      0.00      -0.1     419.6                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:01  472731.5      0.00      -0.1     419.6                          
+    0:01:01  472731.5      0.00      -0.1     419.6                          
+    0:01:01  472731.5      0.00      -0.1     419.6                          
+
+
+  Beginning Design Rule Fixing  (min_capacitance)  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:01  472731.5      0.00      -0.1     419.6                          
+    0:01:01  472736.6      0.00      -0.1     417.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:01  472736.6      0.00      -0.1     417.0                          
+    0:01:01  472736.6      0.00      -0.1     417.0                          
+    0:01:05  471989.7      0.00      -0.1     417.0                          
+    0:01:06  471767.4      0.00      -0.1     417.0                          
+    0:01:06  471691.0      0.00      -0.1     417.0                          
+    0:01:06  471670.6      0.00      -0.1     417.0                          
+    0:01:06  471657.0      0.00      -0.1     417.0                          
+    0:01:07  471650.2      0.00      -0.1     417.0                          
+    0:01:07  471643.5      0.00      -0.1     417.0                          
+    0:01:07  471636.7      0.00      -0.1     417.0                          
+    0:01:07  471629.9      0.00      -0.1     417.0                          
+    0:01:07  471623.1      0.00      -0.1     417.0                          
+    0:01:07  471616.3      0.00      -0.1     417.0                          
+    0:01:07  471609.5      0.00      -0.1     417.0                          
+    0:01:07  471602.7      0.00      -0.1     417.0                          
+    0:01:07  471592.5      0.00      -0.1     417.0                          
+    0:01:07  471579.0      0.00      -0.1     417.0                          
+    0:01:07  471568.8      0.00      -0.1     417.0                          
+    0:01:07  471568.8      0.00      -0.1     417.0                          
+    0:01:08  471568.8      0.00      -0.1     417.0                          
+    0:01:08  471314.2      0.00      -0.1     417.0                          
+    0:01:08  471307.4      0.00      -0.1     417.0                          
+    0:01:08  471307.4      0.00      -0.1     417.0                          
+    0:01:08  471307.4      0.00      -0.1     417.0                          
+    0:01:08  471307.4      0.00      -0.1     417.0                          
+    0:01:08  471307.4      0.00      -0.1     417.0                          
+    0:01:08  471307.4      0.00      -0.1     417.0                          
+    0:01:08  470927.2      0.00      -0.1     417.0                          
+    0:01:08  470516.4      0.00      -0.1     417.0                          
+    0:01:09  469789.9      0.00      -0.1     417.0                          
+    0:01:10  469134.7      0.00      -0.1     417.0                          
+    0:01:12  468913.0      0.00      -0.1     417.0                          
+    0:01:12  468451.3      0.00      -0.1     417.0                          
+    0:01:13  467813.1      0.00      -0.1     417.0                          
+    0:01:14  467283.5      0.00      -0.1     417.0                          
+    0:01:15  466787.9      0.00      -0.1     417.0                          
+    0:01:15  466312.6      0.00      -0.1     417.0                          
+    0:01:15  465840.7      0.00      -0.1     417.0                          
+    0:01:15  465715.1      0.00      -0.1     417.0                          
+    0:01:16  465525.0      0.00      -0.1     417.0                          
+    0:01:16  464798.5      0.00      -0.1     417.0                          
+    0:01:21  464754.4      0.00      -0.1     417.0                          
+    0:01:22  464754.4      0.00      -0.1     417.0                          
+    0:01:22  464754.4      0.00      -0.1     417.0                          
+    0:01:22  464754.4      0.00      -0.1     417.0                          
+    0:01:22  464754.4      0.00      -0.1     417.0                          
+    0:01:22  464754.4      0.00      -0.1     417.0                          
+    0:01:22  464754.4      0.00      -0.1     417.0                          
+    0:01:22  464754.4      0.00      -0.1     417.0                          
+Loading db file '/home/ichip/project/chip/ref/db/io/SP013W_V1p0_max.db'
+Loading db file '/home/ichip/project/chip/ref/db/sc/slow_1v08c125.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'aes' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'aes_core/keymem/clk': 2495 load(s), 1 driver(s)
+1
+Current design is 'aes'.
+design_vision> report_timing -nworst 10
+Information: Updating design information... (UID-85)
+Warning: Design 'aes' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : aes
+Version: H-2013.03-SP1
+Date   : Sun Jan 13 21:37:23 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow_1v08c125   Library: slow_1v08c125
+Wire Load Model Mode: top
+
+  Startpoint: XIN (clock source 'XIN')
+  Endpoint: XOUT (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (fall edge)                    5.00       5.00
+  input external delay                     2.00       7.00 f
+  XIN (in)                                 0.00       7.00 f
+  SCLK_PAD/XOUT (PX3W)                     0.62       7.62 r
+  XOUT (out)                               0.00       7.62 r
+  data arrival time                                   7.62
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -7.62
+  -----------------------------------------------------------
+  slack (MET)                                         0.38
+
+
+  Startpoint: DATA_0 (input port clocked by XIN)
+  Endpoint: SEG_1 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_0 (inout)                           0.00       2.00 r
+  DATA_0_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_0_PAD/C (PBD20W)                    0.68       2.68 r
+  U1051/Y (INVX1)                          0.05       2.72 f
+  U856/Y (OAI22XL)                         0.68       3.41 r
+  display/data_in[0] (display)             0.00       3.41 r
+  display/U26/Y (XOR2X1)                   0.34       3.75 f
+  display/U25/Y (NAND2X1)                  0.14       3.89 r
+  display/U74/Y (AOI22X1)                  0.10       3.99 f
+  display/U4/Y (OAI221X1)                  0.72       4.71 r
+  display/data_out[1] (display)            0.00       4.71 r
+  SEG_1_PAD/PAD (PO20W)                    1.82       6.53 r
+  SEG_1 (out)                              0.00       6.53 r
+  data arrival time                                   6.53
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.53
+  -----------------------------------------------------------
+  slack (MET)                                         1.47
+
+
+  Startpoint: DATA_1 (input port clocked by XIN)
+  Endpoint: SEG_2 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_1 (inout)                           0.00       2.00 r
+  DATA_1_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_1_PAD/C (PBD20W)                    0.68       2.68 r
+  U1052/Y (INVX1)                          0.05       2.72 f
+  U709/Y (OAI22XL)                         0.51       3.23 r
+  display/data_in[1] (display)             0.00       3.23 r
+  display/U13/Y (INVX1)                    0.22       3.45 f
+  display/U16/Y (OR2X1)                    0.28       3.73 f
+  display/U76/Y (AOI222XL)                 0.33       4.06 r
+  display/U5/Y (OAI221X1)                  0.51       4.57 f
+  display/data_out[2] (display)            0.00       4.57 f
+  SEG_2_PAD/PAD (PO20W)                    1.86       6.43 f
+  SEG_2 (out)                              0.00       6.43 f
+  data arrival time                                   6.43
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.43
+  -----------------------------------------------------------
+  slack (MET)                                         1.57
+
+
+  Startpoint: DATA_0 (input port clocked by XIN)
+  Endpoint: SEG_1 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_0 (inout)                           0.00       2.00 r
+  DATA_0_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_0_PAD/C (PBD20W)                    0.68       2.68 r
+  U1051/Y (INVX1)                          0.05       2.72 f
+  U856/Y (OAI22XL)                         0.68       3.41 r
+  display/data_in[0] (display)             0.00       3.41 r
+  display/U26/Y (XOR2X1)                   0.21       3.62 f
+  display/U25/Y (NAND2X1)                  0.14       3.76 r
+  display/U74/Y (AOI22X1)                  0.10       3.86 f
+  display/U4/Y (OAI221X1)                  0.72       4.58 r
+  display/data_out[1] (display)            0.00       4.58 r
+  SEG_1_PAD/PAD (PO20W)                    1.82       6.40 r
+  SEG_1 (out)                              0.00       6.40 r
+  data arrival time                                   6.40
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.40
+  -----------------------------------------------------------
+  slack (MET)                                         1.60
+
+
+  Startpoint: DATA_0 (input port clocked by XIN)
+  Endpoint: SEG_1 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_0 (inout)                           0.00       2.00 r
+  DATA_0_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_0_PAD/C (PBD20W)                    0.68       2.68 r
+  U1051/Y (INVX1)                          0.05       2.72 f
+  U856/Y (OAI22XL)                         0.68       3.41 r
+  display/data_in[0] (display)             0.00       3.41 r
+  display/U26/Y (XOR2X1)                   0.36       3.77 r
+  display/U25/Y (NAND2X1)                  0.09       3.87 f
+  display/U74/Y (AOI22X1)                  0.19       4.05 r
+  display/U4/Y (OAI221X1)                  0.48       4.53 f
+  display/data_out[1] (display)            0.00       4.53 f
+  SEG_1_PAD/PAD (PO20W)                    1.86       6.39 f
+  SEG_1 (out)                              0.00       6.39 f
+  data arrival time                                   6.39
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.39
+  -----------------------------------------------------------
+  slack (MET)                                         1.61
+
+
+  Startpoint: DATA_1 (input port clocked by XIN)
+  Endpoint: SEG_1 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_1 (inout)                           0.00       2.00 r
+  DATA_1_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_1_PAD/C (PBD20W)                    0.68       2.68 r
+  U1052/Y (INVX1)                          0.05       2.72 f
+  U709/Y (OAI22XL)                         0.51       3.23 r
+  display/data_in[1] (display)             0.00       3.23 r
+  display/U26/Y (XOR2X1)                   0.35       3.58 f
+  display/U25/Y (NAND2X1)                  0.14       3.72 r
+  display/U74/Y (AOI22X1)                  0.10       3.82 f
+  display/U4/Y (OAI221X1)                  0.72       4.54 r
+  display/data_out[1] (display)            0.00       4.54 r
+  SEG_1_PAD/PAD (PO20W)                    1.82       6.36 r
+  SEG_1 (out)                              0.00       6.36 r
+  data arrival time                                   6.36
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.36
+  -----------------------------------------------------------
+  slack (MET)                                         1.64
+
+
+  Startpoint: DATA_0 (input port clocked by XIN)
+  Endpoint: SEG_2 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_0 (inout)                           0.00       2.00 r
+  DATA_0_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_0_PAD/C (PBD20W)                    0.68       2.68 r
+  U1051/Y (INVX1)                          0.05       2.72 f
+  U856/Y (OAI22XL)                         0.68       3.41 r
+  display/data_in[0] (display)             0.00       3.41 r
+  display/U76/Y (AOI222XL)                 0.33       3.74 f
+  display/U5/Y (OAI221X1)                  0.75       4.49 r
+  display/data_out[2] (display)            0.00       4.49 r
+  SEG_2_PAD/PAD (PO20W)                    1.82       6.31 r
+  SEG_2 (out)                              0.00       6.31 r
+  data arrival time                                   6.31
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.31
+  -----------------------------------------------------------
+  slack (MET)                                         1.69
+
+
+  Startpoint: DATA_0 (input port clocked by XIN)
+  Endpoint: SEG_2 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_0 (inout)                           0.00       2.00 r
+  DATA_0_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_0_PAD/C (PBD20W)                    0.68       2.68 r
+  U1051/Y (INVX1)                          0.05       2.72 f
+  U856/Y (OAI22XL)                         0.68       3.41 r
+  display/data_in[0] (display)             0.00       3.41 r
+  display/U16/Y (OR2X1)                    0.19       3.60 r
+  display/U76/Y (AOI222XL)                 0.13       3.73 f
+  display/U5/Y (OAI221X1)                  0.75       4.48 r
+  display/data_out[2] (display)            0.00       4.48 r
+  SEG_2_PAD/PAD (PO20W)                    1.82       6.30 r
+  SEG_2 (out)                              0.00       6.30 r
+  data arrival time                                   6.30
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.30
+  -----------------------------------------------------------
+  slack (MET)                                         1.70
+
+
+  Startpoint: DATA_1 (input port clocked by XIN)
+  Endpoint: SEG_4 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_1 (inout)                           0.00       2.00 r
+  DATA_1_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_1_PAD/C (PBD20W)                    0.68       2.68 r
+  U1052/Y (INVX1)                          0.05       2.72 f
+  U709/Y (OAI22XL)                         0.51       3.23 r
+  display/data_in[1] (display)             0.00       3.23 r
+  display/U13/Y (INVX1)                    0.22       3.45 f
+  display/U78/Y (OA22X1)                   0.32       3.77 f
+  display/U6/Y (OAI221X1)                  0.69       4.46 r
+  display/data_out[4] (display)            0.00       4.46 r
+  SEG_4_PAD/PAD (PO20W)                    1.82       6.28 r
+  SEG_4 (out)                              0.00       6.28 r
+  data arrival time                                   6.28
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.28
+  -----------------------------------------------------------
+  slack (MET)                                         1.72
+
+
+  Startpoint: DATA_0 (input port clocked by XIN)
+  Endpoint: SEG_1 (output port clocked by XIN)
+  Path Group: XIN
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  aes                ForQA                 slow_1v08c125
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock XIN (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     2.00       2.00 r
+  DATA_0 (inout)                           0.00       2.00 r
+  DATA_0_PAD/PAD (PBD20W)                  0.00       2.00 r
+  DATA_0_PAD/C (PBD20W)                    0.68       2.68 r
+  U1051/Y (INVX1)                          0.05       2.72 f
+  U856/Y (OAI22XL)                         0.68       3.41 r
+  display/data_in[0] (display)             0.00       3.41 r
+  display/U9/Y (NOR2X1)                    0.22       3.63 f
+  display/U33/Y (AOI22X1)                  0.30       3.93 r
+  display/U4/Y (OAI221X1)                  0.47       4.40 f
+  display/data_out[1] (display)            0.00       4.40 f
+  SEG_1_PAD/PAD (PO20W)                    1.86       6.27 f
+  SEG_1 (out)                              0.00       6.27 f
+  data arrival time                                   6.27
+
+  clock XIN (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -6.27
+  -----------------------------------------------------------
+  slack (MET)                                         1.73
+
+
+1
+design_vision> write -hierarchy -format verilog -output /home/ichip/Desktop/DC_Final/rtl.v
+Writing verilog file '/home/ichip/Desktop/DC_Final/rtl.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+design_vision> write_sdf rtl.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/ichip/Desktop/DC_Final/rtl.sdf'. (WT-3)
+1
+design_vision> write_sdc rtl.sdc
+1
+design_vision> 
